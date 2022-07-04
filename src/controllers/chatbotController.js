@@ -80,10 +80,9 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {    
 
     // Create the payload for a basic text message
-    { tag = "greeting",
-       patterns = ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Hey", "Ekse", "Hi"],
-       responses = ["Hi stranger", "Yebo yes, how can I help", "Ey watsupp", "Ekse Hoezit", "Hola", "Hey dude", "You again"]
-      }
+    response = {
+      "text": `You sent the message: "${received_message.text}". Now send me an image!`
+    }
   }  
   
   else if (received_message.attachments) {
