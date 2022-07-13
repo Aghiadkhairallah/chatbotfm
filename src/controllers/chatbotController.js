@@ -81,7 +81,7 @@ function handleMessage(sender_psid, received_message) {
 
     // Create the payload for a basic text message
     {
-      intents: [
+      intents[
         {"tag": "greeting",
          "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Hey", "Ekse", "Hi"],
          "responses": ["Hi stranger", "Yebo yes, how can I help", "Ey watsupp", "Ekse Hoezit", "Hola", "Hey dude", "You again"]
