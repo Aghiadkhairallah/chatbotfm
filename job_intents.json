@@ -18,7 +18,7 @@
        },
        {"tag": "name",
         "patterns": ["What is your name", "Whats your name", "Tell me your name", "Who are you", "Ungubani", "Tell me about yourself", "You are"],
-        "responses": ["I am Karabo", "My name is Karabo", "You can call me KB for short", "I am Karabo, my friends call me KB", "Karabo is my name"]
+        "responses": ["I am lana kherallah ", "My name is lana kherallah ", "You can call me lk for short", "I am lana kherallah, my friends call me KB", "lana is my name"]
         },
         {"tag": "options",
          "patterns": ["What do you do", "How can you help", "What do you know", "What is your purpose", "How can you help"],
