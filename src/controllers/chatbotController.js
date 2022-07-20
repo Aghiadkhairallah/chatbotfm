@@ -80,38 +80,12 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {    
 
     // Create the payload for a basic text message
-    {
-      intents[
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Hey", "Ekse", "Hi"],
-         "responses": ["Hi stranger", "Yebo yes, how can I help", "Ey watsupp", "Ekse Hoezit", "Hola", "Hey dude", "You again"]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Ok bye", "Bye Bye"],
-         "responses": ["See you!", "Have a nice day", "Sure Bye", "Later dude", "Sayoonara", "Peace out", "Sure dude", "Ciao"]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure", "You are welcome", "Sure dude"]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand", "I am still here dude"]
-         },
-         {"tag": "name",
-          "patterns": ["What is your name", "Whats your name", "Tell me your name", "Who are you", "Ungubani", "Tell me about yourself", "You are"],
-          "responses": ["I am lana kherallah ", "My name is lana kherallah ", "You can call me lk for short", "I am lana kherallah, my friends call me KB", "lana is my name"]
-          },
-          {"tag": "options",
-           "patterns": ["What do you do", "How can you help", "What do you know", "What is your purpose", "How can you help"],
-           "responses": ["I can tell you about South Africa", "I can give you interesting facts about South Africa"]
-          },
-         {"tag": "south_africa_info",
-          "patterns": ["South Africa", "What can you tell me about SA", "SA", "Tell me about SA", "What about SA", "What do you know about SA", "Tell me more about SA", "What can you tell me about South Africa", "Tell me about South Africa", "What about South Africa", "What do you know about South Africa", "Tell me more about South Africa"],
-          "responses": ["South Africa is the southern most country in Africa, it has a population of more than 59million people and covers an area of 1221 037m2. South Africa has 11 official languages. The currency used in ZAR our South African Rand which trades at about 15ZAR per 1USD."]
-          }
-      ]
+    response = {
+      "text": `You sent the message: "${received_message.text}". Now send me an image!`
     }
+  
+  // Sends the response message
+  callSendAPI(sender_psid, response);     
   }  
   
   else if (received_message.attachments) {
