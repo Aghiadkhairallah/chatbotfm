@@ -70,7 +70,6 @@ let postWebhook = (req, res) => {
     res.sendStatus(404);
   }
 }
-
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
 
@@ -81,7 +80,7 @@ function handleMessage(sender_psid, received_message) {
 
     // Create the payload for a basic text message
     response = {
-      "text": `You sent the message: "${received_message.text}".to Techfugees`
+      "text": `You sent the message: "${received_message.text}".to Techfugees Team`
     }
   
   // Sends the response message
