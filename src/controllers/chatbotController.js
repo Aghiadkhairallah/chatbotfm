@@ -80,7 +80,7 @@ function handleMessage(sender_psid, received_message) {
 
     // Create the payload for a basic text message
     response = {
-      "text": `You sent the message: "${received_message.text}".to Techfugees Team`
+      "text": `You sent the message: "${received_message.text}".to Techfugees Teams`
     }
   
   // Sends the response message
